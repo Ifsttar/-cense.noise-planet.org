@@ -1,0 +1,54 @@
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h5 class="sub-title">Identifiant de la cellule : {{id}}</h5>
+		<h3 class="title-feature">Qualité</h3>
+		<p class="text-feature">
+			Selon vous, lorsque vous rentrez ou sortez de chez vous, à pied ou à vélo, l'environnement sonore dans votre rue est :
+		</p>
+		<h5 class="sub-title">Désagréable (1) / Agréable (7) : {{meanagr}}</h5>
+		<h4 class="sub-title">Inerte, amorphe (1) / Animé, mouvementé (7) : {{meanani}}</h4>
+		<h5 class="sub-title"> Agité, chaotique (1) / Calme, tranquille (7) : {{meancal}}</h5>		
+		
+		<hr>
+
+		<h3 class="title-feature">Gêne générale</h3>
+		<p class="text-feature">
+			Lorsque vous êtes piéton, ou à vélo, en déplacement dans votre quartier, êtes-vous généralement gêné par le bruit ? 
+		</p>
+		<p class="text-feature">
+			<i>Réponses possibles : "Pas du tout" / "Légèrement" / "Moyennement" / "Beaucoup" / "Extrêmement"</i>
+		</p>
+		<h5 class="sub-title">Réponse : {{geng_def}}</h5>
+
+		<hr>
+				
+		<h3 class="sub-title">Sources sonores</h3>
+		<p class="text-feature">
+			Présence de la source sonore ?<br> 
+			<i>(1= Jamais / 7 = Continuellement)</i>
+		</p>
+		<h5 class="sub-title">Petits oiseaux : {{meanbrd}}</h5>
+		<h5 class="sub-title">Circulation routière : {{meantra}}</h5> 
+		<h5 class="sub-title">Voix apaisées : {{meancav}}</h5> 
+		<h5 class="sub-title">Voix expressives : {{meanexv}}</h5> 
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032E46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+	.sub-title{
+		color: #032E46;
+		font-family:"roboto_bold";
+	}
+</style>

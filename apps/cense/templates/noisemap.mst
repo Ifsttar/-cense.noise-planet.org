@@ -1,0 +1,33 @@
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature">{{nom}}</h3>
+		<p class="text-feature">
+			<h4 class="sub-title">Intervalle dB(A) : {{db}}</h4>
+			<h5 class="sub-title">Classe de niveau sonore : {{idiso}}</h5>
+			<hr>
+			<img src="https://parlonssciences.ca/sites/default/files/styles/width_800px/public/2019-12/%C3%89chelle_des_d%C3%A9cibels_1.png?itok=LNVQxDjd" class="img-responsive" style="margin-top:5%;" />	
+		</p>	
+	</li>
+
+
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032E46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+	.sub-title{
+		color: #032E46;
+		font-family:"roboto_bold";
+	}
+</style>

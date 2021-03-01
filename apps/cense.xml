@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application title="CENSE - Portail cartographique" mouseposition="false" logo="./apps/cense/img/CENSE-logo.png" help="./apps/cense/help/mviewer_help.html" measuretools="true" exportpng="true" style="css/themes/cense.css" togglealllayersfromtheme="true"/>
+    <!--<mapoptions maxzoom="19" projection="EPSG:3857" center="-375435.87,6064881.03" zoom="15" projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" /> -->
+    <mapoptions maxzoom="19" projection="EPSG:3857" center="-373176,6065407" zoom="15" projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" />
+  
+    <baselayers style="default"><!-- style="default"||gallery" -->
+        <baselayer  type="fake" id="fake" label="Carroyage" title="Carroyage" thumbgallery="img/basemap/grid.png" visible="false"  />
+        <baselayer  type="OSM" id="darkmatter" label="Dark Matter" title="CartoDb" thumbgallery="img/basemap/darkmatter.png" 
+            url="http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png" maxzoom="20" 
+            visible="false" attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" />
+        <baselayer  type="OSM" id="positron" label="Positron" title="CartoDb" thumbgallery="img/basemap/positron.png" 
+            url="http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" maxzoom="20" 
+            visible="true" attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" />
+        <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="img/basemap/osm.png" 
+            url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+            attribution="© MapQuest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" visible="false"/>
+    </baselayers>     
+    <proxy url=""/>
+    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/>
+    <searchparameters bbox="false" localities="true" features="false" />   
+
+    <themes> 
+        <theme name="Territoire"  collapsed="false" id="network" icon="fas fa-users">
+    		<layer id="cense:cense_noeuds" name="Noeuds" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+		    </layer>
+    		<layer id="cense:cense_citybox" name="Citybox" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+		    </layer>
+		    <layer id="cense:cense_armoires" name="Armoires" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+		    </layer>
+		    <layer id="cense:cense_liens" name="Liens" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+		    </layer>
+		    <layer id="cense:survey_buildings_merge" name="Bâtiments" 
+		        visible="true" tiled="true" queryable="false" fields="" aliases="" toplayer="true"   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_buildings_white" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+		    </layer>
+		</theme>         
+        <theme name="Carte du bruit"  collapsed="false" id="noisemap" icon="fas fa-users">
+        	<layer id="cense:contouring_noise_map_day_zone_capteur" name="Carte de bruit" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/noisemap.mst"></template>
+		    </layer>
+		</theme>
+		<theme name="Paysage sonore"  collapsed="false" id="survey_resulting_grid" icon="fas fa-users">
+			<group name="Agrément" id="grp1" >
+		    
+        	<layer id="cense:survey_resulting_grid" name="Gêne générale" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_geng" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_mean_geng.mst"></template>
+		    </layer>
+
+        	<layer id="cense:survey_resulting_grid" name="Désagréable / Agréable" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_agr" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_mean_agr.mst"></template>
+		    </layer>
+        	<layer id="cense:survey_resulting_grid" name="Inerte / Animé" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_ani" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_mean_ani.mst"></template>
+		    </layer>
+        	<layer id="cense:survey_resulting_grid" name="Agité / Calme" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_cal" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_mean_cal.mst"></template>
+		    </layer>
+
+
+
+		    </group>
+		    <group name="Sources perçues" id="grp2" >
+		    <layer id="cense:survey_resulting_grid" name="Oiseaux" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_brd" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_source_meanbrd.mst"></template>
+		    </layer>
+		    <layer id="cense:survey_resulting_grid" name="Trafic routier" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_tra" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_source_meantra.mst"></template>
+		    </layer>
+		    <layer id="cense:survey_resulting_grid" name="Voix calmes" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_cav" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_source_meancav.mst"></template>
+		    </layer>
+		    <layer id="cense:survey_resulting_grid" name="Voix expressives" 
+		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
+                infoformat="application/vnd.ogc.gml" featurecount="20"
+                style="survey_grid_mean_exv" 
+	            url="https://nm.noise-planet.org/geoserver/cense/wms"
+	            attribution="ANR CENSE">
+	            <template url="./apps/cense/templates/survey_source_meanexv.mst"></template>
+		    </layer>
+		</group>
+		</theme>                  
+        
+
+    </themes>
+</config>
+
