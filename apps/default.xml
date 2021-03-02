@@ -63,6 +63,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/noisemap.mst"></template>
@@ -75,6 +76,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_geng" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_mean_geng.mst"></template>
@@ -84,6 +86,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_agr" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_mean_agr.mst"></template>
@@ -92,6 +95,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_ani" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_mean_ani.mst"></template>
@@ -100,6 +104,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_cal" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_mean_cal.mst"></template>
@@ -113,6 +118,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_brd" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_source_meanbrd.mst"></template>
@@ -120,7 +126,8 @@
 		    <layer id="cense:survey_resulting_grid" name="Trafic routier" 
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
-                style="survey_grid_mean_tra" 
+                style="survey_grid_mean_tra"
+                 exclusive="true"  
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_source_meantra.mst"></template>
@@ -129,6 +136,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_cav" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_source_meancav.mst"></template>
@@ -137,6 +145,7 @@
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="survey_grid_mean_exv" 
+                 exclusive="true" 
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 	            <template url="./apps/cense/templates/survey_source_meanexv.mst"></template>
