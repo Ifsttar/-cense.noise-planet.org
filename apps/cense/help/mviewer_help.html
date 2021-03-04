@@ -1,23 +1,95 @@
 <ul class="nav nav-tabs" role="tablist">    
-	<li role="presentation" class="active"><a href="#h_kartenn" aria-controls="profile" role="tab" data-toggle="tab">CENSE</a></li>
+	<li role="presentation" class="active"><a href="#h_welcome" aria-controls="profile" role="tab" data-toggle="tab">Accueil</a></li>
+
+    <li role="presentation"><a href="#h_cense" aria-controls="profile" role="tab" data-toggle="tab">CENSE</a></li>
+
+    <li role="presentation"><a href="#h_results" aria-controls="profile" role="tab" data-toggle="tab">Résultats</a></li>    
+
+    <li role="presentation"><a href="#h_biblio" aria-controls="profile" role="tab" data-toggle="tab">Bibliographie</a></li>
 
     <li role="presentation" ><a href="#h_credits" aria-controls="settings" role="tab" data-toggle="tab" i18n="help.modal.credits">Mentions légales</a></li>   
 </ul>
 
  <!-- Tab panes -->
 <div class="tab-content">
-	<div role="tabpanel" class="tab-pane active" id="h_kartenn">
-        <h4 i18n="help.modal.about">À propos du projet CENSE</h4>
+    <div role="tabpanel" class="tab-pane active" id="h_welcome">
+        <h4 i18n="help.modal.about">Bienvenue</h4>
         <p align="justify">
-            Le présent portail cartographique fait partie du projet de recherche <b>CENSE</b>, financé par l'Agence Nationale de la Recherche (ANR - Convention N°ANR-16-CE22-0012).
+            Le présent portail a pour but de mettre à disposition, sous la forme de cartes, une partie des résultats produits dans le cadre du projet de recherche <b>CENSE</b>, financé par l'Agence Nationale de la Recherche (ANR - Convention N°ANR-16-CE22-0012).
+            <br>
+            Pour plus d'information sur ce projet, veuillez consulter l'onglet "CENSE".
+        </p>
+
+        <h5>Comment utiliser ce site ?</h5>
+        
+        <center>
+        <img src="./apps/cense/help/help_welcome.png" width=100%>
+        </center>
+    </div>  
+
+
+	<div role="tabpanel" class="tab-pane" id="h_cense">
+        <h4 i18n="help.modal.cense">À propos du projet CENSE</h4>
+        <p align="justify">
+            Le projet de recherche <b>CENSE</b> s'intéresse à la caractérisation des environnements sonores urbains, à travers le prisme de la modélisation, des réseaux de capteurs et des données libres.
             <br>
             Pour plus d'information sur ce projet, veuillez consulter le site dédié <b><a href="https://cense.ifsttar.fr/" target="blank">https://cense.ifsttar.fr/</a></b>.
         </p>
+
+        <h5>Consortium</h5>
+        <p align="justify">
+            Ce projet est réalisé par le consortium suivant :
+            <ul>
+                <li><a href="https://cense.ifsttar.fr/partenaires/laboratoires-de-recherche-publics/" target="_blank"><b>Laboratoires de recherche</b></a>: UMRAE, Cerema, CNRS, INRIA, UBS, Université de Cergy Pontoise</li>
+                <li><a href="https://cense.ifsttar.fr/partenaires/entreprises-privees/" target="_blank"><b>Entreprises privées</b></a> : Bouygues Energies & Services, WI6Labs</li>
+                <li><a href="https://cense.ifsttar.fr/partenaires/associations/" target="_blank"><b>Association</b></a>: BruitParif</li>
+            </ul>
+        </p>
+
+
+        <h5>Partenaires</h5>
+        Le projet est soutenu par les <a href="https://cense.ifsttar.fr/partenaires/autres-partenaires/" target="_blank"><b>partenaires</b></a> suivants :
+        <ul>
+            <li>La ville de <a href="https://cense.ifsttar.fr/partenaires/villes/" target="_blank"><b>Lorient</b></a></li>
+            <li>Smart Electricity Cluster (S2E2)</li>
+            <li>Images & Réseaux</li>
+        </ul>
+
+        <h5>Financement</h5>
+        <p align="justify">
+        Ce projet est financé par l'Agence Nationale de la Recherche (<a href="https://anr.fr/" target="_blank"><b>ANR</b></a> - Convention N°ANR-16-CE22-0012).            
+        </p>
+        <hr>
         <center>
-        <img src="https://cense.ifsttar.fr/fileadmin/contributeurs/CENSE/Illustration/CENSE-noisemap.png" width=75%>
+        <img src="./apps/cense/help/partenaires.png" width=80%>
         </center>
     </div>  
-    
+
+    <div role="tabpanel" class="tab-pane" id="h_results">
+        <h4 i18n="help.modal.biblio">Résultats</h4>
+        
+        <h5>Carte de bruit</h5>
+        <p align="justify">
+            La carte de bruit ici présentée a été réalisée à l'aide du logiciel open-source <a href="https://noise-planet.org/noisemodelling.html" target="_blank"><b>NoiseModelling</b></a>, développé conjointement par l'UMRAE et le CNRS, membres du projet CENSE.
+            <br>
+            Elle a été produite à partir de données provenant de la base données libre <a href="https://www.openstreetmap.org/" target="_blank"><b>OpenStreetMap</b></a>
+        </p>
+
+        <h5>Paysages sonores</h5>
+        <p align="justify">
+            Les cartes de paysages sonores présentent les résultats d'une enquête réalisée auprès des habitants de la zone d'étude (du centre ville de Lorient). 
+        </p>
+    </div>    
+
+
+    <div role="tabpanel" class="tab-pane" id="h_biblio">
+        <h4 i18n="help.modal.biblio">Bibliographie</h4>
+        <p align="justify">
+            Ci-dessous sont listées des publications scientifiques produites dans le cadre du projet CENSE. 
+        </p>
+    </div>      
+
+
     <div role="tabpanel" class="tab-pane" id="h_credits">
         <h4 i18n="help.modal.credits">Mentions légales</h4>
 

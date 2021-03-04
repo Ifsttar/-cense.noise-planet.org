@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <application title="CENSE - Portail cartographique" mouseposition="false" logo="./apps/cense/img/CENSE-logo.png" help="./apps/cense/help/mviewer_help.html" measuretools="true" exportpng="true" style="css/themes/cense.css" togglealllayersfromtheme="true"/>
+    <application title="ANR CENSE - Portail cartographique" home="https://cense.ifsttar.fr/" mouseposition="false" logo="./apps/cense/img/CENSE-logo.png" help="./apps/cense/help/mviewer_help.html" showhelp="true" titlehelp="Portail cartographique du projet CENSE" measuretools="true" exportpng="true" style="css/themes/cense.css" togglealllayersfromtheme="true"/>
     <!--<mapoptions maxzoom="19" projection="EPSG:3857" center="-375435.87,6064881.03" zoom="15" projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" /> -->
     <mapoptions maxzoom="19" projection="EPSG:3857" center="-373176,6065407" zoom="15" projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" />
   
@@ -21,7 +21,7 @@
     <searchparameters bbox="false" localities="true" features="false" />   
 
     <themes> 
-        <theme name="Territoire"  collapsed="false" id="network" icon="fas fa-users">
+		<theme name="Infrastructure"  collapsed="false" id="infra" icon="fas fa-users">    
     		<layer id="cense:cense_noeuds" name="Noeuds" 
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
@@ -50,6 +50,8 @@
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 		    </layer>
+		</theme>         
+        <theme name="Territoire"  collapsed="false" id="network" icon="fas fa-users">
 		    <layer id="cense:survey_buildings_merge" name="Bâtiments" 
 		        visible="true" tiled="true" queryable="false" fields="" aliases="" toplayer="true"   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
@@ -57,9 +59,9 @@
 	            url="https://nm.noise-planet.org/geoserver/cense/wms"
 	            attribution="ANR CENSE">
 		    </layer>
-		</theme>         
+		</theme> 
         <theme name="Carte du bruit"  collapsed="false" id="noisemap" icon="fas fa-users">
-        	<layer id="cense:contouring_noise_map_day_zone_capteur" name="Carte de bruit" 
+        	<layer id="cense:contouring_noise_map_day_zone_capteur" name="Carte de bruit (dB(A))" 
 		        visible="false" tiled="true" queryable="true" fields="" aliases=""   
                 infoformat="application/vnd.ogc.gml" featurecount="20"
                 style="" 
